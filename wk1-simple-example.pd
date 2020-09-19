@@ -1,0 +1,19 @@
+#N canvas 862 271 574 419 12;
+#X obj 122 344 dac~;
+#X text 179 343 Digital Analog Converter;
+#X obj 96 180 osc~ 340;
+#X text 194 285 Scaling object \; changing volume;
+#X obj 122 283 *~ 0.2;
+#X msg 195 231 0;
+#X msg 292 229 0.2;
+#X floatatom 120 118 5 0 0 0 - - -;
+#X text 181 120 Changing oscillator frequency;
+#X text 183 180 Oscillator frequency at 440 Hz sine wave;
+#X text 85 41 wk1-simple-example Description: An oscillator that changes
+frequency and volume;
+#X connect 2 0 4 0;
+#X connect 4 0 0 0;
+#X connect 4 0 0 1;
+#X connect 5 0 4 1;
+#X connect 6 0 4 1;
+#X connect 7 0 2 0;
