@@ -1,0 +1,34 @@
+#N canvas 813 149 625 663 12;
+#X msg 28 31 hello world;
+#X obj 63 153 print;
+#X msg 51 63 hello pd;
+#X floatatom 151 51 5 0 0 0 - - -;
+#X text 210 290 metronome 节拍器 #: time interval in ms;
+#X obj 61 295 metro 1000;
+#X text 210 150 print: for debugging;
+#X obj 62 358 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 61 241 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 210 241 toggle: represent 1 or 0 \; turning on and off;
+#X text 210 365 bang: do it \; gives visual for the metro's action
+;
+#X text 211 49 number box: click and drag to change;
+#X obj 206 517 metro 1000;
+#X floatatom 272 448 5 0 0 0 - - -;
+#X msg 137 449 1;
+#X msg 188 449 0;
+#X obj 206 577 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 324 494 cold inlet: does not produce output when there's a
+change;
+#X text 38 491 hot inlet: direct effect on the output;
+#X connect 0 0 1 0;
+#X connect 2 0 1 0;
+#X connect 3 0 1 0;
+#X connect 5 0 7 0;
+#X connect 8 0 5 0;
+#X connect 12 0 16 0;
+#X connect 13 0 12 1;
+#X connect 14 0 12 0;
+#X connect 15 0 12 0;
