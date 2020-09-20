@@ -1,0 +1,138 @@
+#N canvas 945 46 450 300 12;
+#N canvas 957 23 450 764 dataflow 0;
+#X floatatom 31 32 5 0 0 0 - - -;
+#X obj 32 87 spigot;
+#X text 9 168 a gate that opens and closes to let data pass or not
+;
+#X floatatom 32 137 5 0 0 0 - - -;
+#X obj 98 31 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X floatatom 350 29 5 0 0 0 - - -;
+#X floatatom 325 136 5 0 0 0 - - -;
+#X obj 325 30 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 325 86 gate;
+#X text 264 169 availiable in pd-extended;
+#X floatatom 22 247 5 0 0 0 - - -;
+#X obj 22 288 select 10 11 12 13 14 15 16;
+#X obj 22 337 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 48 337 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 75 337 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 101 337 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 128 337 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 154 337 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 181 337 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 208 337 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 261 269 select sends a bang when matched;
+#X msg 20 412 2 33;
+#X msg 68 412 2 312;
+#X msg 124 411 3 63;
+#X msg 174 411 3 12;
+#X msg 223 410 4 872;
+#X msg 283 410 4 3.1;
+#X msg 341 410 5 77;
+#X msg 392 410 5 1.3;
+#X obj 201 490 route 1 2 3 4 5;
+#X floatatom 60 540 5 0 0 0 - - -;
+#X floatatom 124 539 5 0 0 0 - - -;
+#X floatatom 194 539 5 0 0 0 - - -;
+#X floatatom 259 540 5 0 0 0 - - -;
+#X floatatom 330 542 5 0 0 0 - - -;
+#X text 38 586 route sorts based on list's first element;
+#X connect 0 0 1 0;
+#X connect 1 0 3 0;
+#X connect 4 0 1 1;
+#X connect 5 0 8 1;
+#X connect 7 0 8 0;
+#X connect 8 0 6 0;
+#X connect 10 0 11 0;
+#X connect 11 0 12 0;
+#X connect 11 1 13 0;
+#X connect 11 2 14 0;
+#X connect 11 3 15 0;
+#X connect 11 4 16 0;
+#X connect 11 5 17 0;
+#X connect 11 6 18 0;
+#X connect 11 7 19 0;
+#X connect 21 0 29 0;
+#X connect 22 0 29 0;
+#X connect 23 0 29 0;
+#X connect 24 0 29 0;
+#X connect 25 0 29 0;
+#X connect 26 0 29 0;
+#X connect 27 0 29 0;
+#X connect 28 0 29 0;
+#X connect 29 0 30 0;
+#X connect 29 1 31 0;
+#X connect 29 2 32 0;
+#X connect 29 3 33 0;
+#X connect 29 4 34 0;
+#X restore 184 113 pd dataflow;
+#N canvas 950 283 450 464 send_receive 0;
+#X floatatom 18 59 5 0 0 0 - - -;
+#X obj 18 81 send float_data;
+#X floatatom 197 80 5 0 0 0 - - -;
+#X floatatom 18 130 5 0 0 0 - - -;
+#X text 16 19 replace the subopatches;
+#X obj 197 57 receive float_data;
+#X obj 18 153 s float_data;
+#X floatatom 196 153 5 0 0 0 - - -;
+#X obj 196 128 r float_data;
+#X text 330 141 abbr.;
+#X floatatom 20 243 5 0 0 0 - - -;
+#X msg 20 284 \; float_data \$1;
+#X text 179 262 message box with semicolon at the beginning \; \$1
+is a variable being replaced;
+#X connect 0 0 1 0;
+#X connect 3 0 6 0;
+#X connect 5 0 2 0;
+#X connect 8 0 7 0;
+#X connect 10 0 11 0;
+#X restore 184 161 pd send_receive;
+#N canvas 948 144 450 628 on_load 0;
+#X floatatom 20 92 5 0 0 0 - - -;
+#X obj 20 114 spigot;
+#X floatatom 20 137 5 0 0 0 - - -;
+#X obj 82 93 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
+;
+#X obj 82 39 loadbang;
+#X msg 82 66 1;
+#X text 173 38 think of loadbang as an initialization;
+#X obj 19 185 loadbang;
+#X obj 21 365 r param1;
+#X floatatom 21 395 5 0 0 0 - - -;
+#X floatatom 96 395 5 0 0 0 - - -;
+#X floatatom 19 464 5 0 0 0 - - -;
+#X floatatom 94 464 5 0 0 0 - - -;
+#X floatatom 173 393 5 0 0 0 - - -;
+#X floatatom 171 462 5 0 0 0 - - -;
+#X obj 96 365 r param2;
+#X obj 173 363 r param3;
+#X obj 19 434 r param4;
+#X obj 94 434 r param5;
+#X obj 171 432 r param6;
+#X msg 19 227 \; param1 100 \; param2 200 \; param3 1 \; param4 1 \;
+param5 44.3 \; param6 0.2;
+#X msg 164 226 \; param1 990 \; param2 2.2 \; param3 0 \; param4 1.222
+\; param5 4004.3 \; param6 5.5;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 3 0 1 1;
+#X connect 4 0 5 0;
+#X connect 5 0 3 0;
+#X connect 7 0 20 0;
+#X connect 8 0 9 0;
+#X connect 15 0 10 0;
+#X connect 16 0 13 0;
+#X connect 17 0 11 0;
+#X connect 18 0 12 0;
+#X connect 19 0 14 0;
+#X restore 184 210 pd on_load;

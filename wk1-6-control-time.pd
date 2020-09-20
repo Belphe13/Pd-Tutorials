@@ -1,0 +1,87 @@
+#N canvas 442 59 1081 757 12;
+#X obj 44 154 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 44 249 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 44 197 metro 200;
+#X msg 96 30 134;
+#X msg 146 30 60;
+#X msg 193 30 110;
+#X floatatom 146 77 5 0 0 0 - - -;
+#X floatatom 146 150 5 0 0 0 - - -;
+#X obj 146 112 expr 1000 / ($f1/60);
+#X text 223 202 metro with BPM expression BPM: Beats per Minute;
+#X obj 49 326 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 49 346 del 200;
+#X obj 49 372 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 149 325 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 149 371 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 149 346 delay 200;
+#X text 248 344 delay a bang by argument in ms;
+#X text 517 28 delay for messages and numbers;
+#X msg 523 60 symbol hello;
+#X msg 642 61 symbol goodbye;
+#X obj 573 111 pipe s 2000;
+#X obj 574 158 prepend set;
+#X msg 574 206;
+#X text 696 112 s for symbols;
+#X floatatom 859 140 5 0 0 0 - - -;
+#X obj 859 162 pipe 2000;
+#X floatatom 859 185 5 0 0 0 - - -;
+#X obj 561 277 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 529 278 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 530 316 timer;
+#X symbolatom 531 359 20 0 0 0 - - -;
+#X text 610 310 timer liek stopwatch;
+#X msg 44 439 0 \, 100 4000;
+#X msg 137 439 10 \, 0 4000;
+#X msg 228 441 0 \, 1 400;
+#X obj 137 508 line;
+#X floatatom 137 557 5 0 0 0 - - -;
+#X text 264 509 ramp from one value to another in a duration of time
+;
+#X text 310 444 start_point \, end_point interval (0 \, 1) in 400 ms
+;
+#X text 582 664 pack overwrites both messages;
+#X floatatom 218 621 5 0 0 0 - - -;
+#X obj 218 643 pack f 500;
+#X obj 218 681 prepend set;
+#X msg 218 721;
+#X obj 100 684 line;
+#X floatatom 102 723 5 0 0 0 - - -;
+#X floatatom 285 619 5 0 0 0 - - -;
+#X connect 0 0 2 0;
+#X connect 2 0 1 0;
+#X connect 3 0 6 0;
+#X connect 4 0 6 0;
+#X connect 5 0 6 0;
+#X connect 6 0 8 0;
+#X connect 7 0 2 1;
+#X connect 8 0 7 0;
+#X connect 10 0 11 0;
+#X connect 11 0 12 0;
+#X connect 13 0 15 0;
+#X connect 15 0 14 0;
+#X connect 18 0 20 0;
+#X connect 19 0 20 0;
+#X connect 20 0 22 0;
+#X connect 24 0 25 0;
+#X connect 25 0 26 0;
+#X connect 27 0 29 1;
+#X connect 28 0 29 0;
+#X connect 29 0 30 0;
+#X connect 32 0 35 0;
+#X connect 33 0 35 0;
+#X connect 34 0 35 0;
+#X connect 35 0 36 0;
+#X connect 40 0 41 0;
+#X connect 41 0 43 0;
+#X connect 41 0 44 0;
+#X connect 44 0 45 0;
+#X connect 46 0 41 1;
