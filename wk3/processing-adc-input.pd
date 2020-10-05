@@ -1,0 +1,23 @@
+#N canvas 0 23 1487 735 12;
+#X obj 187 97 env~ 120;
+#X obj 187 128 - 100;
+#X obj 188 162 vu 15 120 empty empty -1 -8 0 10 -66577 -1 1 0;
+#X obj 61 149 adc~;
+#X obj 61 182 *~;
+#X obj 154 153 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X msg 154 296 \$1 20;
+#X obj 154 324 line~;
+#X obj 61 216 dac~;
+#X text 58 32 Say something into a microphone and play it back at a
+changed volume:;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 3 0 4 0;
+#X connect 3 0 0 0;
+#X connect 3 1 4 0;
+#X connect 3 1 0 0;
+#X connect 4 0 8 0;
+#X connect 5 0 6 0;
+#X connect 6 0 7 0;
+#X connect 7 0 4 1;
