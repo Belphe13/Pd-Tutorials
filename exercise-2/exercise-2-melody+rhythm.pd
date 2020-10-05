@@ -1,7 +1,7 @@
 #N canvas 0 23 1440 776 12;
-#X msg 504 56 \; pd dsp \$1;
-#X obj 504 33 tgl 15 0 empty empty Master_Switch 17 7 0 10 -262144
--1 -1 1 1;
+#X msg 489 57 \; pd dsp \$1;
+#X obj 489 34 tgl 15 0 empty empty Master_Switch 17 7 0 10 -262144
+-1 -1 8 1;
 #X obj 39 122 ring-modulation;
 #X obj 39 203 harmonic-series;
 #X text 38 34 Use a combination of control and audio objects to create

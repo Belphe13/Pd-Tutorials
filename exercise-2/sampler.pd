@@ -2,7 +2,7 @@
 #X obj 754 592 line~;
 #X msg 543 67 \; pd dsp \$1;
 #X obj 543 44 tgl 15 0 empty empty Master_Switch 17 7 0 10 -262144
--1 -1 0 1;
+-1 -1 1 1;
 #X obj 289 605 line~;
 #X obj 55 604 line~;
 #X obj 512 603 line~;
@@ -49,7 +49,7 @@ correctly;
 #X array soundfile-tom18 13952 float 2;
 #X coords 0 1 13952 -1 200 140 1 0 0;
 #X restore 1161 195 graph;
-#X obj 276 134 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 276 134 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 48 453 metro 100;
 #X floatatom 274 161 5 100 500 0 - - -;
@@ -68,7 +68,7 @@ correctly;
 #X obj 488 714 *~;
 #X obj 487 749 dac~;
 #X obj 279 187 hsl 128 15 0 2 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 4200 1;
+-1 -1 100 1;
 #X msg 637 721 \$1 20;
 #X obj 637 749 line~;
 #X obj 289 658 *~ 1;
@@ -116,7 +116,10 @@ correctly;
 #X text 190 133 metro bang;
 #X text 120 159 metro number control;
 #X obj 300 435 select 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15;
-#X obj 47 489 random 16;
+#X obj 48 544 random 16;
+#X obj 73 487 f;
+#X obj 114 487 + 1;
+#X floatatom 73 517 5 0 0 0 - - -;
 #X connect 0 0 45 0;
 #X connect 2 0 1 0;
 #X connect 3 0 47 0;
@@ -135,6 +138,7 @@ correctly;
 #X connect 15 0 51 0;
 #X connect 17 0 18 0;
 #X connect 18 0 65 0;
+#X connect 18 0 66 0;
 #X connect 19 0 18 1;
 #X connect 20 0 5 0;
 #X connect 21 0 5 0;
@@ -180,4 +184,7 @@ correctly;
 #X connect 64 11 25 0;
 #X connect 64 13 58 0;
 #X connect 65 0 64 0;
+#X connect 66 0 67 0;
+#X connect 66 0 68 0;
+#X connect 67 0 66 1;
 #X coords 0 -1 1 1 320 120 1 100 100;
