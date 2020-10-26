@@ -1,0 +1,68 @@
+#N canvas 648 85 624 716 12;
+#X obj 119 130 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 50 196 t b b;
+#X obj 50 233 openpanel;
+#X obj 50 269 pack s s;
+#X obj 50 332 soundfiler;
+#X msg 50 298 read -resize \$1 \$2;
+#X obj 128 232 symbol soundfile-hh;
+#X obj 344 102 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 344 122 f \$0;
+#X floatatom 344 145 5 0 0 0 - - -;
+#X obj 149 130 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 285 195 t b b;
+#X obj 285 232 openpanel;
+#X obj 285 268 pack s s;
+#X obj 285 331 soundfiler;
+#X msg 285 297 read -resize \$1 \$2;
+#X obj 363 231 symbol soundfile-hho;
+#X obj 179 130 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 48 399 t b b;
+#X obj 48 436 openpanel;
+#X obj 48 472 pack s s;
+#X obj 48 535 soundfiler;
+#X msg 48 501 read -resize \$1 \$2;
+#X obj 209 130 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 287 398 t b b;
+#X obj 287 435 openpanel;
+#X obj 287 471 pack s s;
+#X obj 287 534 soundfiler;
+#X msg 287 500 read -resize \$1 \$2;
+#X obj 126 435 symbol soundfile-kick;
+#X obj 365 434 symbol soundfile-snare;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 1 6 0;
+#X connect 2 0 3 0;
+#X connect 3 0 5 0;
+#X connect 5 0 4 0;
+#X connect 6 0 3 1;
+#X connect 7 0 8 0;
+#X connect 8 0 9 0;
+#X connect 10 0 11 0;
+#X connect 11 0 12 0;
+#X connect 11 1 16 0;
+#X connect 12 0 13 0;
+#X connect 13 0 15 0;
+#X connect 15 0 14 0;
+#X connect 16 0 13 1;
+#X connect 17 0 18 0;
+#X connect 18 0 19 0;
+#X connect 18 1 29 0;
+#X connect 19 0 20 0;
+#X connect 20 0 22 0;
+#X connect 22 0 21 0;
+#X connect 23 0 24 0;
+#X connect 24 0 25 0;
+#X connect 24 1 30 0;
+#X connect 25 0 26 0;
+#X connect 26 0 28 0;
+#X connect 28 0 27 0;
+#X connect 29 0 20 1;
+#X connect 30 0 26 1;
+#X coords 0 -1 1 1 140 60 1 100 100;
