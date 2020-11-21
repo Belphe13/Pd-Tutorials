@@ -11,11 +11,16 @@ Teensy LC starter code
 
 */
 
+#include <Wire.h>
+//Click here to get the library: http://librarymanager/All#SparkFun_VCNL4040
+#include "SparkFun_VCNL4040_Arduino_Library.h"
+VCNL4040 proximitySensor;
+
 // analog values array size, must be constant
 const int num_of_analog_pins = 4; // total numer of analog pins
 int analog_values[num_of_analog_pins];
 int analog_pins[] = {
-  23, 16, 15, 14// list each analog pin to use
+  17,16,15,14// list each analog pin to use
 };
 
 // digital_values array size, must be constant
@@ -47,6 +52,15 @@ void setup() {
   //  pinMode(13, INPUT_PULLUP);
 
   Serial.begin(9600);
+
+  Wire.begin(); //Join i2c bus
+
+  proximitySensor.begin(); //Initialize the sensor
+
+  //Turn on everything
+  proximitySensor.powerOnProximity();
+  proximitySensor.powerOnAmbient();
+  proximitySensor.enableWhiteChannel();
 }
 
 void loop() {
@@ -69,5 +83,23 @@ void loop() {
   }
   Serial.println(" ");
 
-  delay(20);
+    unsigned int proxValue = proximitySensor.getProximity();
+  Serial.print("proximity: ");
+  Serial.print(proxValue);
+  Serial.print(" ");
+  Serial.println(" ");
+  
+  unsigned int ambientValue = proximitySensor.getAmbient(); 
+  Serial.print("ambientlight: ");
+  Serial.print(ambientValue);
+  Serial.print(" ");
+  Serial.println(" ");
+
+  unsigned int whiteValue = proximitySensor.getWhite(); 
+  Serial.print("whitelight: ");
+  Serial.print(whiteValue);
+  Serial.print(" ");
+  Serial.println(" ");
+
+  delay(10);
 }
