@@ -46,9 +46,9 @@
 #X obj 317 305 >= 75;
 #X obj 423 305 <= -50;
 #X obj 114 128 vsl 15 85 -100 100 0 0 empty empty z 0 -9 0 10 -262144
--1 -1 3700 1;
+-1 -1 0 1;
 #X obj 149 201 hsl 85 15 -150 150 0 0 empty empty x -2 -8 0 10 -262144
--1 -1 4212 1;
+-1 -1 0 1;
 #X obj 90 39 inlet;
 #X obj 146 38 inlet;
 #X obj 352 657 outlet~;
@@ -101,7 +101,7 @@ correctly;
 #X connect 8 1 7 1;
 #X restore 264 152 pd sampleConversion;
 #X text 428 156 taken from example 3_tabread4z_line.pd;
-#X msg 264 214 341894 7752.7;
+#X msg 264 214 643120 14583.2;
 #X msg 264 182 set \$1 \$2;
 #X obj 264 38 loadbang;
 #X obj 624 596 bng 15 250 50 0 empty empty Print_File_Path 17 7 0 10
@@ -227,8 +227,7 @@ correctly;
 #X connect 80 0 9 0;
 #X connect 81 0 10 0;
 #X connect 82 0 10 0;
-#X connect 83 0 65 0;
-#X connect 83 0 65 1;
+#X connect 83 0 42 0;
 #X connect 84 0 83 0;
 #X connect 85 0 83 0;
 #X connect 86 0 83 0;
