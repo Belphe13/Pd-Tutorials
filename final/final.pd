@@ -60,13 +60,13 @@
 #X msg 359 358 TYPE_SCREEN_TAP \$1;
 #X msg 359 328 TYPE_SWIPE \$1;
 #X obj 220 296 tgl 15 0 empty to_gestures_circle circle 17 7 0 10 -262144
--1 -1 0 1;
+-1 -1 1 1;
 #X obj 220 326 tgl 15 0 empty to_gestures_key_tap key_tap 17 7 0 10
--262144 -1 -1 0 1;
+-262144 -1 -1 1 1;
 #X obj 220 341 tgl 15 0 empty to_gestures_screen_tap screen_tap 17
-7 0 10 -262144 -1 -1 0 1;
+7 0 10 -262144 -1 -1 1 1;
 #X obj 220 311 tgl 15 0 empty to_gestures_swipe swipe 17 7 0 10 -262144
--1 -1 0 1;
+-1 -1 1 1;
 #X obj 110 299 tgl 15 0 empty to_fingers_direction direction 17 7 0
 10 -262144 -1 -1 0 1;
 #X msg -49 310 fingers_direction \$1;
@@ -139,10 +139,11 @@
 #X obj 629 344 s general;
 #X obj 777 392 s tool;
 #X obj 703 327 leapmotion;
-#X obj 31 28 input;
 #X msg 593 68 \; pd dsp \$1;
 #X obj 593 45 tgl 15 0 empty empty Master_Switch 17 7 0 10 -262144
--1 -1 0 1;
+-1 -1 1 1;
+#X obj 31 28 palm-input;
+#X obj 32 369 gesture-input;
 #X connect 0 0 10 0;
 #X connect 1 0 2 0;
 #X connect 2 0 0 0;
@@ -153,5 +154,5 @@
 #X connect 10 0 8 0;
 #X connect 10 1 4 0;
 #X connect 10 2 6 0;
-#X connect 13 0 12 0;
+#X connect 12 0 11 0;
 #X coords 0 656 1 655 510 320 0;
