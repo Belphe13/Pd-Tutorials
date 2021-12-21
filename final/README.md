@@ -1,7 +1,7 @@
 # Y2.02K
 Final Project for Programming Sound @ RISD. 
 
-Sensor Insturment with Pure Data patch controlled Leap Motion Controller, which takes hand and fingers motions and coordinates as inputs to control the sound and volume, while the output would be composed of a series of organ, beeping, dialing sound and other samples.
+Sensor instrument with Pure Data patch controlled by Leap Motion controller, which takes hand and finger motions and coordinates as inputs to control the sound and volume, while outputs a composition of organ, beeping, dialing tones and other sound samples.
 
 Screen recording of Leap Motion Visualizer: [Video](https://vimeo.com/belphe13/review/490552963/1e2f905fff) 
 
