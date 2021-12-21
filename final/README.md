@@ -1,6 +1,9 @@
 # Y2.02K
-Final Project for Programming Sound @ RISD. Sensor Insturment with Pure Data and Leap Motion Controller.
-[Video](https://vimeo.com/belphe13/review/490552963/1e2f905fff) - screen recording of Leap Motion Visualizer.
+Final Project for Programming Sound @ RISD. 
+
+Sensor Insturment with Pure Data patch controlled Leap Motion Controller, which takes hand and fingers motions and coordinates as inputs to control the sound and volume, while the output would be composed of a series of organ, beeping, dialing sound and other samples.
+
+Screen recording of Leap Motion Visualizer: [Video](https://vimeo.com/belphe13/review/490552963/1e2f905fff) 
 
 ## Control
 Gestures:
